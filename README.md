@@ -1,8 +1,8 @@
 # vue-seo
 
 > A Vue.js education project with prerender spa plugin
-> Prerendering for seo reasons
-> [source article](https://snipcart.com/blog/vuejs-tutorial-seo-example)
+Prerendering vue components for seo engine crawlers
+[source article](https://snipcart.com/blog/vuejs-tutorial-seo-example)
 
 ## Build Setup
 
