@@ -6,12 +6,12 @@
 </template>
 
 <script>
-// import TopContext from './components/TopContext.vue'
+import TopContext from './components/TopContext.vue'
 
 export default {
   name: 'app',
   components: { 
-    // TopContext 
+    TopContext 
   }
 }
 </script>

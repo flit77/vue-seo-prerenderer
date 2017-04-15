@@ -1,8 +1,15 @@
 var path = require('path')
 var webpack = require('webpack')
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+var PrerenderSpaPlugin = require('prerender-spa-plugin');
 
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    app: [
+      'babel-polyfill',
+      './src/main.js'
+    ]
+  },  
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -33,6 +40,15 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new CopyWebpackPlugin([{
+      from: 'src/static'
+    }]),
+    new PrerenderSpaPlugin(
+      path.join(__dirname, 'dist'),
+      [ '/', '/products/1', '/products/2', '/products/3']
+    )
+  ],  
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'

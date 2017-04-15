@@ -17,3 +17,10 @@ export default {
   }
 }
 </script>
+
+<style>
+    .products{
+        display: flex;
+        justify-content: space-around;  
+    }
+</style>
